@@ -388,9 +388,36 @@ display: block;
     text-align: center;
 }
   
-  
+  .clients  {
+    justify-content: center;
+    height: 372px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
-
+.clients .title {
+  font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-main-text);
+    text-transform: none;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    display: block;
+ 
+    
+    margin-top: 0;
+margin-bottom: 50px;
+text-align: center;
+display: block;
+}
 
   .footer {
     background-color: var(--secondary-bg-cl);
