@@ -38,6 +38,11 @@
     text-decoration: none;
   }
   
+  .icon {
+
+    fill: currentColor;
+  }
+  
   .container {
     margin-right: auto;
     margin-left: auto;
@@ -124,7 +129,9 @@ letter-spacing: 0.02em;
   }
   
   .contact-list .link {
-    display: block;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     color: var(--color-secondary-text);
     
   }
@@ -137,7 +144,13 @@ letter-spacing: 0.02em;
   .contact-list {
     display: flex;
     align-items: center;
-}
+  }
+
+    /** .contact-list .link::before {
+      content: "";
+      float: left
+    }
+**/
 
   .list {
     list-style: none;
@@ -145,7 +158,26 @@ letter-spacing: 0.02em;
     margin: 0;
   }
 
-/**Головна сторінка**/
+    .icon {
+      margin-right: 10px;
+      
+  }
+  
+  .item-icon.mail{
+      width: 16px;
+      height: 12px;
+  }
+  
+  .item-icon.phone{
+      width: 10px;
+      height: 16px;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+/**Герой**/
 
 
   .hero {
@@ -154,6 +186,12 @@ letter-spacing: 0.02em;
     margin-right: auto;
     margin-left: auto;
     max-width: 1600px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1600px;
+    height: 600px;
   }
     
     .hero > .container {
@@ -198,6 +236,12 @@ letter-spacing: 0.02em;
   }
   .btn {
     cursor: pointer;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    color: var(--accent);
+    background-color: #FFFFFF;
   }
 
   /** Наші переваги **/
@@ -249,17 +293,26 @@ letter-spacing: 0.02em;
     color: var(--color-secondary-text);
   }
   
-
+   .icon-box {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #F5F4FA;
+     margin-bottom: 30px;
+     height: 120px;
+     width: 270px;
+     border-radius: 4px;
+   }
   /** Чим ми займаємось **/
 
 .work {
   
   justify-content: center;
-height: 386px;
+
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 
 }
 
@@ -312,7 +365,7 @@ display: block;
   }
 
 
-
+/** Наша команда **/
 
   .team {
     background-color: #f5f4fa;
@@ -321,6 +374,8 @@ display: block;
   display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
+
+  
     
   }
 
@@ -347,6 +402,7 @@ display: block;
     justify-content: center;
     margin: 0%;
     padding: 0%;
+    
   }
   
   
@@ -356,7 +412,13 @@ display: block;
   .team .list > .item > img {
     display: block;
   }
+ 
+  .team .item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 
+  }
 
   .team .name {
     font-style: normal;
@@ -370,11 +432,14 @@ display: block;
     padding: 0;
     text-align: center;
 
+    
+
   }
     .description {
       padding: 30px 0px;
       padding-top: 30px;
       padding-bottom: 30px;
+      
     }
 
 
@@ -396,6 +461,10 @@ display: block;
   padding-left: 0%;
 }
 
+.social-item {
+
+ color: var(--color-secondary-text);
+}
 
 .social-item:not(:last-child) {
   margin-right: 10px;
@@ -409,6 +478,7 @@ display: block;
   align-items: center;
   border-radius: 50%;
 margin: 0%;
+
 }
 
 .social-link {
@@ -418,6 +488,7 @@ margin: 0%;
   width: 44px;
   height: 44px;
   background-color: #FFFFFF;
+  color: #AFB1B8; 
   border-radius: 50%;
 
 }
@@ -456,9 +527,11 @@ margin: 0%;
 
 
 .social-icon {
-  fill: #AFB1B8;;
+  fill: currentColor;
 }
   
+/** Наші клієнти **/
+
   .clients  {
     justify-content: center;
     height: 372px;
@@ -467,6 +540,8 @@ margin: 0%;
     margin-left: auto;
     padding-top: 94px;
     padding-bottom: 94px;
+
+    
   }
 
 .clients .title {
@@ -483,12 +558,55 @@ margin: 0%;
     text-align: center;
     display: block;
  
-    
-    margin-top: 0;
-margin-bottom: 50px;
-text-align: center;
-display: block;
 }
+
+.clients .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  background-color: #FFFFFF;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+
+}
+.clients .container .list {
+  display: flex;
+  justify-content: center;
+
+}
+
+.clients .list > .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients .item {
+
+  width: 170px;
+  height: 90px;
+}
+.clients-icon {
+  fill: #AFB1B8;
+}
+
+.clients .link:hover,
+.clients .link:focus {
+    color: var(--accent);
+    background-color: #FFFFFF;
+    border-color: 1px solid var(--accent);
+    border-radius: 4px;
+    border-color: var(--accent);
+  }
+  
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--accent); 
+}
+
+
+
+/** Підвал **/
 
   .footer {
     background-color: var(--secondary-bg-cl);
@@ -496,11 +614,52 @@ display: block;
     padding-bottom: 60px;
   }
   
-  .footer > .container {
+  .footer .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  
+  .ftr-box {
+    display: flex;
     flex-direction: column;
   }
+
+  .ftr-box-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    padding: 30px 0px;
+    padding-bottom: 30px;
+    padding-top: 0%;
+}
+  
+
+  .ftr-box-link .link {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0%;
+    
+}
+  
+
+  .join {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+margin-top: 0%;
+margin-bottom: 20;
+color: #FFFFFF;
+  }
+
   .address {
     display: inline-block;
     padding-top: 20px;
@@ -551,7 +710,41 @@ display: block;
     color: var(--accent);
   }
 
+.ftr-box-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
 
+.ftr-box-link {
+  padding-top: 0%;
+  margin-left: 90px;
+}
+
+.ftr-box-link .social {
+  padding: 0%;
+  margin: 0%;
+}
+
+.ftr-box-link .item:not(:last-child) {
+  margin-right: 10px;
+}
+.ftr-box-link .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+.ftr-box-link .link:hover,
+.ftr-box-link .link:focus {
+  background-color: var(--accent);
+  fill: #FFFFFF;
+}
 
 
   /* Portfolio.html */
@@ -592,6 +785,7 @@ display: block;
       padding: 6px 22px;
       border-radius: 4px;
       border: none;
+
    }
 
    .btn-list:hover,
@@ -625,6 +819,11 @@ display: block;
     margin-bottom: 30px;
   }
   
+  .card:hover,
+  .ard:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
   .card img {
     display: block;
   }
