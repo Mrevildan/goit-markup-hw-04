@@ -488,7 +488,7 @@ margin: 0%;
   width: 44px;
   height: 44px;
   background-color: #FFFFFF;
-  color: #AFB1B8; 
+  color: #AFB1B8;
   border-radius: 50%;
 
 }
@@ -520,20 +520,26 @@ margin: 0%;
 .social-link:hover .social-icon {
   fill: #FFFFFF;
 }
+.social-link:focus .social-icon {
+  fill: #FFFFFF;
+}
+
 
 .social-link:hover {
   background-color: var(--accent);
+  color: #FFFFFF;
 }
 
-.social .link:hover,
 .social .link:focus {
   background-color: var(--accent);
-  fill: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .social-icon {
   fill: currentColor;
 }
+
+
   
 /** Наші клієнти **/
 
