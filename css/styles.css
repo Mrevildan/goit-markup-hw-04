@@ -187,7 +187,7 @@ letter-spacing: 0.02em;
     margin-left: auto;
     max-width: 1600px;
 
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero.png);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.png);
     background-repeat: no-repeat;
     background-position: center;
     max-width: 1600px;
@@ -525,6 +525,11 @@ margin: 0%;
   background-color: var(--accent);
 }
 
+.social .link:hover,
+.social .link:focus {
+  background-color: var(--accent);
+  fill: #FFFFFF;
+}
 
 .social-icon {
   fill: currentColor;
@@ -586,24 +591,36 @@ margin: 0%;
   width: 170px;
   height: 90px;
 }
+
+.clients .link {
+  color: #AFB1B8;
+}
 .clients-icon {
-  fill: #AFB1B8;
+  fill: currentColor;
 }
 
-.clients .link:hover,
-.clients .link:focus {
+.clients .link:hover {
     color: var(--accent);
     background-color: #FFFFFF;
     border-color: 1px solid var(--accent);
     border-radius: 4px;
     border-color: var(--accent);
+    fill: var(--accent);
   }
   
-.clients-icon:hover,
+  .clients .link:focus {
+    color: var(--accent);
+    border-color: var(--accent);
+    fill: var(--accent);
+  }
+
+  
+
+/** .clients-icon:hover,
 .clients-icon:focus {
   fill: var(--accent); 
 }
-
+**/
 
 
 /** Підвал **/
